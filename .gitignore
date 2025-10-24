@@ -6,3 +6,7 @@ __pycache__/
 *pyc
 
 training_data.csv
+
+# Ignore Python virtual environments
+Computer_vision/test_env/
+
