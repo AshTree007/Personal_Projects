@@ -24,13 +24,13 @@ model = nn.Sequential(
     nn.ReLU(),
     nn.Linear(32,16),
     nn.ReLU(),
-    nn.Linear(16, 7)
+    nn.Linear(16, 8)
 )
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=.0001)
 
-epochs = 5000
+epochs = 5000 
 for epoch in range(epochs):
     for batch_X, batch_y in loader:
         outputs = model(batch_X)

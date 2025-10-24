@@ -15,7 +15,7 @@ model = nn.Sequential(
     nn.ReLU(),
     nn.Linear(32,16),
     nn.ReLU(),
-    nn.Linear(16, 7)
+    nn.Linear(16, 8)
 )
 
 model.load_state_dict(torch.load("model.pth"))
