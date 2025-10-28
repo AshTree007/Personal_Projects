@@ -1,23 +1,48 @@
-# To-Do List
+# To-Do List Command-Line Application
 
-This is a simple command-line to-do list application that allows you to manage your tasks. The tasks are stored in a local SQLite database.
+![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+This project is a simple command-line interface (CLI) to-do list application that enables users to manage their tasks efficiently. Task data is persistently stored in a local SQLite database.
+
+---
 
 ## Features
 
-*   **Add Tasks:** Add new tasks to your to-do list.
-*   **View Tasks:** View all the tasks in your to-do list with their status (done or not done).
-*   **Mark Tasks as Done:** Mark tasks as completed.
-*   **Delete Tasks:** Remove tasks from your to-do list.
-*   **Persistent Storage:** Tasks are saved in a `todo.db` SQLite database file, so your data is not lost when you close the application.
+*   **Add Tasks:** Users can add new tasks to their to-do list.
+*   **View Tasks:** Displays all tasks with their current status (completed or pending).
+*   **Mark Tasks as Done:** Allows users to mark specific tasks as completed.
+*   **Delete Tasks:** Provides functionality to remove tasks from the list.
+*   **Persistent Storage:** All tasks are saved in a `todo.db` SQLite database file, ensuring data is retained across application sessions.
 
-## How to Use
+---
 
-1.  Run the `main.py` script from your terminal:
+## Getting Started
+
+### Prerequisites
+
+*   Python 3.x
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/Personal_projects.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd Personal_projects/todo_list
+    ```
+
+### Usage
+
+To operate the to-do list application:
+
+1.  **Run the Application:** From the `todo_list` directory, execute the `main.py` script:
     ```bash
     python main.py
     ```
-
-2.  You will be presented with a menu of options:
+2.  **Interact with the Menu:** A menu of options will be presented in the terminal:
     ```
     === TO-DO LIST ===
     1. Add task
@@ -26,10 +51,24 @@ This is a simple command-line to-do list application that allows you to manage y
     4. Delete task
     5. Exit
     ```
+3.  **Select an Option:** Enter the number corresponding to the desired action and press Enter. Follow any subsequent prompts.
 
-3.  Choose an option by entering the corresponding number.
+---
 
-## Files
+## Project Structure
 
-*   `main.py`: The main script for the to-do list application.
-*   `todo.db`: The SQLite database file where the tasks are stored (this file will be created when you first run the application).
+```
+todo_list/
+├───README.md
+└───main.py
+└───todo.db (generated upon first run)
+```
+
+---
+
+## Technologies Used
+
+*   Python
+*   SQLite3 (built-in Python module)
+
+---

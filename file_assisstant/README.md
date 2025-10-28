@@ -1,6 +1,11 @@
 # File Assistant
 
-A command-line tool to help manage your files by scanning, organizing, and identifying old files.
+![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+A command-line tool for managing files by scanning, organizing, and identifying old files.
+
+---
 
 ## Features
 
@@ -11,7 +16,26 @@ A command-line tool to help manage your files by scanning, organizing, and ident
     *   `documents`: .pdf, .docx, .txt
     *   `videos`: .mp4, .mov, .avi
 
-## How to Use
+---
+
+## Getting Started
+
+### Prerequisites
+
+*   Python 3.x
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/Personal_projects.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd Personal_projects/file_assisstant
+    ```
+
+### Usage
 
 1.  Run the `scheduler.py` script from your terminal:
     ```bash
@@ -33,10 +57,26 @@ A command-line tool to help manage your files by scanning, organizing, and ident
     ```
     This will scan the `Documents` folder in your home directory.
 
-## Files
+---
 
-*   `scheduler.py`: The main entry point for the application.
-*   `utils/scanner.py`: Contains the function for scanning folders.
-*   `utils/old_file.py`: Contains the function for finding old files.
-*   `utils/organizer.py`: Contains the function for organizing files.
-*   `utils/notif.py`: Contains a function for sending desktop notifications (currently used for macOS).
+## Project Structure
+
+```
+file_assisstant/
+├───README.md
+├───scheduler.py
+└───utils/
+    ├───__init__.py
+    ├───notif.py
+    ├───old_file.py
+    ├───organizer.py
+    └───scanner.py
+```
+
+---
+
+## Technologies Used
+
+*   Python
+
+---

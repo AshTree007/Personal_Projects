@@ -1,45 +1,100 @@
-# Gesture Recognition
+# Gesture Recognition System
 
-This project is a real-time hand gesture recognition system that uses `mediapipe` for hand tracking and a `PyTorch` neural network for gesture classification.
+![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-00FF00?style=for-the-badge&logo=mediapipe&logoColor=white)
+
+This project implements a real-time hand gesture recognition system utilizing `mediapipe` for hand tracking and a `PyTorch` neural network for gesture classification.
+
+---
 
 ## Features
 
-*   **Real-time Gesture Recognition:** Recognizes hand gestures from a live video stream from your webcam.
-*   **Hand Tracking:** Uses `mediapipe` to detect and track hand landmarks.
-*   **PyTorch Model:** A sequential neural network built with PyTorch is used to classify the gestures based on the hand landmark data.
-*   **Model Training:** Includes a script (`model_trainer.py`) to train the gesture recognition model on your own custom data.
+*   **Real-time Gesture Recognition:** Detects and classifies hand gestures from a live webcam feed.
+*   **Hand Tracking:** Leverages `mediapipe` to accurately detect and track 3D hand landmarks.
+*   **PyTorch Model:** Employs a custom-built sequential neural network in PyTorch for robust gesture classification.
+*   **Model Training:** Includes a dedicated script (`model_trainer.py`) for training the gesture recognition model with custom datasets.
 
-## Setup
+---
 
-1.  **Install Dependencies:** Install the required Python libraries using the `reqs.txt` file:
+## Getting Started
+
+### Prerequisites
+
+*   Python 3.x
+*   Webcam
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/Personal_projects.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd Personal_projects/gesture_recognition
+    ```
+3.  Install the required Python libraries:
     ```bash
     pip install -r reqs.txt
     ```
 
-2.  **Run the Application:** To start the gesture recognition, run the `video_stream.py` script:
+### Usage
+
+To operate the real-time gesture recognition system, execute the main application file:
+
+1.  **Run the Application:** From the `gesture_recognition` directory, execute the `video_stream.py` script:
     ```bash
     python video_stream.py
     ```
-    This will open a window showing your webcam feed with the recognized gesture printed to the console.
+2.  **Observe Output:** A window displaying your webcam feed will open. The system will continuously analyze your hand movements. Recognized gestures will be printed to the console in real-time.
+3.  **Perform Gestures:** Position your hand clearly in front of the webcam and perform the gestures that the model has been trained to recognize. The console output will indicate the detected gesture.
+
+---
 
 ## How it Works
 
-1.  **Hand Detection:** The `hand_detection.py` script uses the `mediapipe` library to process the video frame and extract the 3D coordinates of the hand landmarks.
+1.  **Hand Detection:** The `hand_detection.py` module processes video frames using the `mediapipe` library to extract 3D coordinates of hand landmarks.
+2.  **Gesture Prediction:** The extracted landmark data is fed into the pre-trained PyTorch model within `gesture_detection.py`, which then predicts the corresponding gesture.
+3.  **Video Stream:** The `video_stream.py` script orchestrates the capture of webcam input, passes frames to the hand detection and gesture prediction modules, and visualizes the output.
 
-2.  **Gesture Prediction:** The extracted landmark data is passed to the pre-trained PyTorch model in `gesture_detection.py`, which then predicts the gesture.
-
-3.  **Video Stream:** The `video_stream.py` script captures the video feed from the webcam, passes each frame to the hand detection and gesture prediction modules, and displays the output.
+---
 
 ## Training a Custom Model
 
-To train the model with your own gestures, you will need to create a `training_data.csv` file with the landmark data for each gesture. The `model_trainer.py` script can then be used to train a new model. The script will save the trained model as `model.pth` and the label encoder as `label_encoder.pth`.
+To train the model with your own gesture data:
 
-## Files
+1.  **Data Preparation:** Create a `training_data.csv` file. This file should contain landmark data for each gesture you wish to train. Each row should represent a single gesture instance with its corresponding landmark coordinates and a label.
+2.  **Model Training Execution:** From the `gesture_recognition` directory, execute the `model_trainer.py` script:
+    ```bash
+    python model_trainer.py
+    ```
+3.  **Output:** The script will save the trained model as `model.pth` and the label encoder as `label_encoder.pth` in the project directory.
 
-*   `video_stream.py`: The main script to run the gesture recognition application.
-*   `hand_detection.py`: Handles the hand tracking and landmark extraction.
-*   `gesture_detection.py`: Contains the PyTorch model and the prediction logic.
-*   `model_trainer.py`: Script for training the gesture recognition model.
-*   `model.pth`: The pre-trained PyTorch model.
-*   `label_encoder.pth`: The saved label encoder for the gesture classes.
-*   `reqs.txt`: A list of the required Python libraries.
+---
+
+## Project Structure
+
+```
+gesture_recognition/
+├───README.md
+├───gesture_detection.py
+├───hand_detection.py
+├───model_trainer.py
+├───reqs.txt
+├───training_data.csv
+└───video_stream.py
+```
+
+---
+
+## Technologies Used
+
+*   Python
+*   PyTorch
+*   MediaPipe
+*   OpenCV
+*   Scikit-learn
+
+---

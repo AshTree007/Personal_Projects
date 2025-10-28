@@ -1,41 +1,55 @@
-# Personal Projects
+# Personal Python Projects
 
-This repository contains a collection of my personal Python projects.
+This repository contains a collection of personal Python projects. Each project is self-contained and demonstrates the use of different Python libraries and frameworks.
 
-## Projects
+---
 
-### File Assistant
+## Projects Overview
 
-A command-line tool to help manage your files.
+Below is a brief overview of the projects included in this repository.
 
-**Features:**
+### [File Assistant](./file_assisstant)
 
-*   **Scan Folder:** Lists all files in a directory and their last modified dates.
-*   **Find Old Files:** Locates files that haven't been modified in over 30 days.
-*   **Organize Folder:** Moves files into subdirectories based on their file type (images, documents, videos).
+A command-line utility for file management. 
 
-### Gesture Recognition
+**Key Features:**
+*   Directory scanning and file listing.
+*   Identification of old and unused files.
+*   File organization based on file type.
 
-A real-time hand gesture recognition system using `mediapipe` and `pytorch`.
+### [Gesture Recognition](./gesture_recognition)
 
-**Features:**
+A real-time hand gesture recognition system implemented with `mediapipe` and `pytorch`.
 
-*   Recognizes a set of predefined hand gestures from a live video stream.
+**Key Features:**
+*   Real-time gesture recognition from a video feed.
 *   Includes a script for training a neural network model on custom gesture data.
 
-### Pokedex
+### [Pokedex](./pokedex)
 
-A simple web application built with Flask that allows you to look up Pokémon information using the [PokeAPI](https://pokeapi.co/).
+A web-based application built with Flask that provides information about Pokémon using the [PokeAPI](https://pokeapi.co/).
 
-**Features:**
+**Key Features:**
+*   Search for Pokémon by name or ID.
+*   Displays Pokémon details such as image, name, ID, height, and weight.
 
-*   Enter a Pokémon's name or ID to view its image, name, ID, height, and weight.
+### [To-Do List](./todo_list)
 
-### To-Do List
+A command-line to-do list application with data persistence using SQLite.
 
-A command-line to-do list application that saves your tasks in a SQLite database.
+**Key Features:**
+*   CRUD (Create, Read, Update, Delete) functionality for tasks.
+*   Tasks are stored in a local SQLite database.
 
-**Features:**
+---
 
-*   Add, view, mark as done, and delete tasks.
-*   Tasks are stored persistently in a local SQLite database.
+## Technologies Showcased
+
+This collection of projects utilizes a range of technologies, including:
+
+*   **Core Language:** Python
+*   **Web Framework:** Flask
+*   **Machine Learning:** PyTorch, MediaPipe
+*   **Database:** SQLite
+
+---
