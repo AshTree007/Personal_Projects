@@ -1,5 +1,6 @@
 import shutil
 import os
+from datetime import datetime
 
 def organize_file(base_path):
     # List all items in the folder
@@ -17,15 +18,16 @@ def organize_file(base_path):
         folders = {
             "images": ["png", "jpg", "jpeg"],
             "documents": ["pdf", "docx", "txt"],
-            "videos": ["mp4", "mov", "avi"],
+            "videos": ["mp4", "mov", "avi"]
         }
 
         # Move file if it matches a category
-        for folder, extensions in folders.items():
-            if ext in extensions:
-                dest_folder = os.path.join(base_path, folder)
-                os.makedirs(dest_folder, exist_ok=True)
-                shutil.move(file_path, dest_folder)
-                print(f"Moved {file_path} -> {dest_folder}")
-                break  # Stop checking other categories for this file
+        with open("things_moved.txt", "a") as file:
+            for folder, extensions in folders.items():
+                if ext in extensions:
+                    dest_folder = os.path.join(base_path, folder)
+                    os.makedirs(dest_folder, exist_ok=True)
+                    shutil.move(file_path, dest_folder)
+                    file.write(f"{datetime.now().strftime("%H:%M:%S")}: Moved {file_path} -> {dest_folder}\n")
+                    break  # Stop checking other categories for this file
 

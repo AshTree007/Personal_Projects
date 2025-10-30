@@ -1,9 +1,8 @@
 # File Assistant
 
 ![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-A command-line tool for managing files by scanning, organizing, and identifying old files.
+A command-line and GUI tool for managing files by scanning, organizing, and identifying old files.
 
 ---
 
@@ -15,6 +14,7 @@ A command-line tool for managing files by scanning, organizing, and identifying 
     *   `images`: .png, .jpg, .jpeg
     *   `documents`: .pdf, .docx, .txt
     *   `videos`: .mp4, .mov, .avi
+*   **GUI:** A graphical user interface to perform all the file management tasks.
 
 ---
 
@@ -32,10 +32,12 @@ A command-line tool for managing files by scanning, organizing, and identifying 
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd Personal_projects/file_assisstant
+    cd Personal_projects/file_assistant
     ```
 
 ### Usage
+
+#### Command-Line Interface (CLI)
 
 1.  Run the `scheduler.py` script from your terminal:
     ```bash
@@ -57,13 +59,23 @@ A command-line tool for managing files by scanning, organizing, and identifying 
     ```
     This will scan the `Documents` folder in your home directory.
 
+#### Graphical User Interface (GUI)
+
+1.  Run the `main.py` script from your terminal:
+    ```bash
+    python main.py
+    ```
+
+2.  The GUI will launch, allowing you to select a folder and choose an action to perform.
+
 ---
 
 ## Project Structure
 
 ```
-file_assisstant/
+file_assistant/
 ├───README.md
+├───main.py
 ├───scheduler.py
 └───utils/
     ├───__init__.py
