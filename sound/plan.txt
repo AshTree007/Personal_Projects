@@ -1,0 +1,14 @@
+What is it:
+    Future:
+        - Speech to text model that takes in a recording of your voice and converts it to words.
+    Current:
+        - Speech to text model that takes in a recording of you spelling out a word and converts it to text
+
+Whats done: 
+     -Made recordings for A through I
+
+TODO:
+    - Finish with letters and add a silence
+
+Future:
+    - Recordings of people talking in words

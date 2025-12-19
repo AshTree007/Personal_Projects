@@ -98,3 +98,14 @@ gesture_recognition/
 *   Scikit-learn
 
 ---
+
+## Gestures Recognized
+
+*   Open hand
+*   OK
+*   Rock Hands
+*   Point up
+*   Three (Index, Middle, and Ring Finger)
+*   Closed Fist
+*   Thumbs up
+*   Thumbs down
